@@ -1,0 +1,9 @@
+.cont-footer
+{
+			background: #FF6624;
+			color     : white;
+			position  : fixed;
+			bottom    : 0;
+			width     : 80%;
+			z-index   : 1000;
+}

@@ -32,32 +32,78 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
            <![endif]-->
          </head>
-          <body style="width:97.8%; margin: 0px auto;">
+          <body style="width: 80%; margin: 0px auto;">
 
-           <header>
+           <header >
 
-             <div class="contenedor"><!-- Cont-Principal -->
-                  <div class="row" >
-                      <!-- Inlucion del partes del header  -->
-                          <?php include (APPLICATION_SECTIONS .'header_logo.php');?><!-- Logo = BALQUIMIA -->
-                      <!-- Inlucion del partes del header  -->
-                  </div>
+             <div class="contenedor-header"><!-- Cont-Principal -->
+                 <div class="row">
+                      <div><!-- Cont -->
 
-                  <div class="row">
-                          <?php include (APPLICATION_SECTIONS .'header_menu.php');?><!-- Menu -->
-                  </div>
+                           <div class="col-lg-2 col-md-2 col-sm-2"><!-- Logo -->
+                              <div>
+                                   <img src="<?= BASE_IMG ;?>logo.png" class="logo">
+                              </div>
+                           </div>
+
+                           <div class="col-lg-10 col-md-10 col-sm-10"><!-- Menu -->
+
+                            <nav class="navbar navbar-default" id="barra_menu">
+                              <div class="container-fluid">
+                                <div class="navbar-header">
+                                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                  </button>
+                                  <a class="link_menu navbar-brand" href="#"><span class="inicio"></span></a>
+                                </div>
+
+                                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                  <ul class="nav navbar-nav">
+
+                                   <!-- Empresas -->
+                                   <li class="dropdown">
+                                    <a href="#" class="link_menu dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Empresas <span class="caret"></span></a>
+                                      <ul class="dropdown-menu" role="menu">
+                                        <!-- optiones => Empresas -->
+                                        <li><a href="#" class="link-sub-lista">Administrar datos</a></li>
+                                        <li><a href="#" class="link-sub-lista">Listado</a></li>
+                                      </ul>
+                                    </li>
+
+                                   <!-- Servicios -->
+                                   <li class="dropdown">
+                                    <a href="#" class="link_menu dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Servicios <span class="caret"></span></a>
+                                      <ul class="dropdown-menu" role="menu">
+                                        <!-- optiones => Servicios -->
+                                        <li><a href="#" class="link-sub-lista">Administrar datos</a></li>
+                                        <li><a href="#" class="link-sub-lista">Listado</a></li>
+                                      </ul>
+                                   </li>
+
+                                  <li><a href="#" class="link_menu">Usuarios</a></li>
+                                  <li><a href="#" class="link_menu">Ingreso al sistema</a></li>
+
+                                  </ul>
+
+
+                                </div><!-- /.navbar-collapse -->
+                              </div><!-- /.container-fluid -->
+                            </nav>
+
+                           </div>
+                      </div>
+                 </div>
              </div><!-- Cont-Principal -->
 
           </header>
 
       <!-- Llamado a los Estilos Css = Header , Footer -->
-
-         <link type="text/css" rel="stylesheet" href="<?=BASE_CSS ;?>balk-header_logo.css"  />      <!-- Logo -->
-         <link type="text/css" rel="stylesheet" href="<?=BASE_CSS ;?>balk-header_navegador.css"  /> <!-- Barra-Buscar -->
-         <link type="text/css" rel="stylesheet" href="<?=BASE_CSS ;?>balk-menu.css"  />             <!-- Menu -->
-         <link type="text/css" rel="stylesheet" href="<?=BASE_CSS ;?>font_styles.css"  />           <!-- Font-Style -->
-         <link type="text/css" rel="stylesheet" href="<?=BASE_CSS ;?>balk-footer.css"  />           <!-- Footer -->
-
+         <link type="text/css" rel="stylesheet" href="<?=BASE_CSS;?>fc_header.css"/> <!-- Header -->
+         <link type="text/css" rel="stylesheet" href="<?=BASE_CSS;?>fc_footer.css"/> <!-- Footer -->
+         <link type="text/css" rel="stylesheet" href="<?=BASE_CSS;?>font_styles.css"/> <!-- Footer -->
       <!-- Llamado a los Estilos Css = Header , Footer -->
 
 <?= $ContenidoBody;?>

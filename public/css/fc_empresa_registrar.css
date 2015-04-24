@@ -1,0 +1,28 @@
+.cont-pagina
+{
+		 display: block;
+		 padding-top: 90px;
+		 background: white;
+}
+
+/*  titulo Registro Modificacion Empresas */
+.titulo_registro_modificacion
+{
+	  color: ;
+}
+
+/* Formulario */
+.cont-formulario
+{
+	   display: block;
+	   position: relative;
+	   width: 50%;
+	   margin: 15px auto;
+}
+
+/* Input */
+.input_text
+{
+	    text-align: center;
+	    text-transform: uppercase;
+}

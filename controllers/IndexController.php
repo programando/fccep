@@ -15,9 +15,16 @@ class IndexController extends Controller
 
     public function Index()
     {
-        $this->View->SetCss(array('balk-index'));
-        $this->View->SetJs(array('balk_velocidad_slider'));
+        $this->View->SetCss(array('fc_index'));
+        $this->View->SetJs(array('fc_empresa_registrar'));
         $this->View->Mostrar_Vista('index');
+    }
+
+        public function empresa()
+    {
+        $this->View->SetCss(array('fc_empresa_registrar'));
+        $this->View->SetJs(array('fc_empresa_registrar'));
+        $this->View->Mostrar_Vista('empresa_crear');
     }
 
 

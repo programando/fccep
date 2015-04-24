@@ -1,0 +1,52 @@
+.contenedor-header
+{
+     width: 80%;
+     position: fixed;
+     display: block;
+     background:  white;
+     z-index: 1000;
+}
+
+.logo
+{
+	   display: block;
+	   width: 100%;
+}
+
+/* Barra Menu */
+#barra_menu
+{
+	  border: none;
+	  background: #FF6624;
+   display: block;
+   margin-top: 45px;
+   margin-bottom: 0;
+}
+
+/* Menu => li */
+#barra_menu .link_menu
+{
+	     color: white;
+}
+
+#barra_menu .link_menu:hover
+{
+	   background: #D15621;
+}
+
+/* Menu => li => Sub-li */
+
+#barra_menu .dropdown-menu
+{
+	  background: #FF6624;
+}
+
+#barra_menu .link-sub-lista
+{
+	   color: white;
+}
+
+#barra_menu .link-sub-lista:hover
+{
+	   background: #D15621;
+}
