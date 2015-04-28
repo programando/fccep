@@ -6,17 +6,20 @@ class EmpresaController extends Controller
     {
         parent::__construct();
 
-
     }
 
-        public function Index()
+     public function Index()
+        {
+
+        }
+
+
+   public function administracion_datos()
     {
-
-    }
-
-
-        public function empresa()
-    {
+    /**
+     * ABRIL 15 DE 2015
+     *  PERMITE LA ADMINISTRACIÓN DE DATOS DE LAS EMPRESAS
+     */
         $this->View->SetCss(array('fc_empresa_registrar'));
         $this->View->SetJs(array('fc_empresa_registrar'));
         $this->View->Mostrar_Vista('empresa_crear');

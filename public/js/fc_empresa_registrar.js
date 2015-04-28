@@ -19,7 +19,7 @@ $nit.on('focus',function(){
 });
 
 $razon_social.on('focus',function(){
-   if ( $razon_social.val() == 'Ingrese Razon Social' ) {
+   if ( $razon_social.val() == 'Ingrese Razón Social' ) {
      $razon_social.css('background','white') ;
      $razon_social.css('color','black') ;
      $razon_social.val('');
@@ -27,7 +27,7 @@ $razon_social.on('focus',function(){
 });
 
 $direccion.on('focus',function(){
-   if ( $direccion.val() == 'Ingrese Direccion' ) {
+   if ( $direccion.val() == 'Ingrese Dirección' ) {
      $direccion.css('background','white') ;
      $direccion.css('color','black') ;
      $direccion.val('');
@@ -35,7 +35,7 @@ $direccion.on('focus',function(){
 });
 
 $telefono.on('focus',function(){
-   if ( $telefono.val() == 'Ingrese Telefono' ) {
+   if ( $telefono.val() == 'Ingrese Teléfono' ) {
      $telefono.css('background','white') ;
      $telefono.css('color','black') ;
      $telefono.val('');
@@ -51,7 +51,7 @@ $ciudad.on('focus',function(){
 });
 
 $act_economica.on('focus',function(){
-   if ( $act_economica.val() == 'Ingrese Actividad Economica' ) {
+   if ( $act_economica.val() == 'Ingrese Actividad Económica' ) {
      $act_economica.css('background','white') ;
      $act_economica.css('color','black') ;
      $act_economica.val('');
@@ -97,21 +97,21 @@ $('#btn_grabar').on('click',function(){
    if ( $razon_social.val()=='' ) {
         $razon_social.css('background','#FF3333') ;
         $razon_social.css('color','white') ;
-        $razon_social.val('Ingrese Razon Social');
+        $razon_social.val('Ingrese Razón Social');
         $campos_validados= false;
    }
 
    if ( $direccion.val()=='' ) {
         $direccion.css('background','#FF3333') ;
         $direccion.css('color','white') ;
-        $direccion.val('Ingrese Direccion');
+        $direccion.val('Ingrese Dirección');
         $campos_validados= false;
    }
 
    if ( $telefono.val()=='' ) {
         $telefono.css('background','#FF3333') ;
         $telefono.css('color','white') ;
-        $telefono.val('Ingrese Telefono');
+        $telefono.val('Ingrese Teléfono');
         $campos_validados= false;
    }
 
@@ -125,7 +125,7 @@ $('#btn_grabar').on('click',function(){
    if ( $act_economica.val()=='' ) {
         $act_economica.css('background','#FF3333') ;
         $act_economica.css('color','white') ;
-        $act_economica.val('Ingrese Actividad Economica');
+        $act_economica.val('Ingrese Actividad Económica');
         $campos_validados= false;
    }
 
