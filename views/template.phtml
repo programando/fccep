@@ -42,7 +42,9 @@
 
                            <div class="col-lg-2 col-md-2 col-sm-2"><!-- Logo -->
                               <div>
-                                   <img src="<?= BASE_IMG ;?>logo.png" class="logo">
+                                  <a href="<?= BASE_URL ;?>index">
+                                     <img src="<?= BASE_IMG ;?>logo.png" class="logo">
+                                  </a>
                               </div>
                            </div>
 
@@ -57,15 +59,15 @@
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>
                                   </button>
-                                  <a class="link_menu navbar-brand" href="#"><span class="inicio"></span></a>
+                                  <a class="link_menu navbar-brand" href="<?= BASE_URL ;?>index"><span class="inicio"></span></a>
                                 </div>
 
                                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                   <ul class="nav navbar-nav">
 
                                    <!-- Empresas -->
-                                   <li class="dropdown">
-                                    <a href="#" class="link_menu dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Empresas <span class="caret"></span></a>
+                                   <li class="dropdown" id="li_erick">
+                                    <a href="#" class="link_menu dropdown-toggle" id="btn_desplegable-empresa" data-toggle="dropdown" role="button" aria-expanded="false">Empresas <span class="caret"></span></a>
                                       <ul class="dropdown-menu" role="menu">
                                         <!-- optiones => Empresas -->
                                         <li><a href="<?= BASE_URL ;?>empresa/administracion_datos" class="link-sub-lista">Administrar datos</a></li>
@@ -75,10 +77,10 @@
 
                                    <!-- Servicios -->
                                    <li class="dropdown">
-                                    <a href="#" class="link_menu dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Servicios <span class="caret"></span></a>
+                                    <a href="#" class="link_menu dropdown-toggle" id="btn_desplegable-servicios" data-toggle="dropdown" role="button" aria-expanded="false">Servicios <span class="caret"></span></a>
                                       <ul class="dropdown-menu" role="menu">
                                         <!-- optiones => Servicios -->
-                                        <li><a href="#" class="link-sub-lista">Administrar datos</a></li>
+                                        <li><a href="<?= BASE_URL ;?>Servicios/administrar_datos" class="link-sub-lista">Administrar datos</a></li>
                                         <li><a href="#" class="link-sub-lista">Listado</a></li>
                                       </ul>
                                    </li>
@@ -97,6 +99,11 @@
              </div><!-- Cont-Principal -->
 
           </header>
+
+<style>
+    #btn_desplegable-empresa , #btn_desplegable-servicios {background: #FF6624;}
+</style>
+
 
       <!-- Llamado a los Estilos Css = Header , Footer -->
          <link type="text/css" rel="stylesheet" href="<?=BASE_CSS;?>fc_header.css"/> <!-- Header -->
