@@ -4,3 +4,26 @@
 		 padding-top: 130px;
 		 background: white;
 }
+
+/* CONT = Slider */
+.cont-slider
+{
+			display: block;
+			width: 80%;
+			margin: 130px auto;
+
+}
+
+/* IMG = Slider */
+.adaptar
+{
+	   display: block;
+	   width: 100%;
+}
+
+/* Indicadores de en que
+       imgane del slider se enceuntra */
+.indicadores-slider
+{
+	    bottom: 0px;
+}
