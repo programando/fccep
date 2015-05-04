@@ -17,11 +17,11 @@ class IndexController extends Controller
     {
         $this->View->SetCss(array('fc_index'));
         $this->View->Mostrar_Vista('index');
+        Session::Set('idactividad',0);
+        Session::Set('idempresa',0);
     }
 
 }
-
-
 
 ?>
 

@@ -150,7 +150,10 @@ $('#btn_grabar').on('click',function(){
         $campos_validados= false;
    }
 
+ if ($campos_validados == true )
+ {
 
+ }
 
 
 

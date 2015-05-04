@@ -25,12 +25,33 @@ class EmpresaController extends Controller
         $this->View->Mostrar_Vista('empresa_crear');
     }
 
+<<<<<<< HEAD
    public function listado_modificar_eliminar()
     {
 
         $this->View->SetCss(array('fc_empresa_listado'));
         $this->View->SetJs(array('fc_empresa_listado'));
         $this->View->Mostrar_Vista('listado');
+=======
+    public function Grabar()
+    {
+        /** ABRIL 17
+         *          PERMITE EL ALMACENAMIENTO/ACTUALIZACION DE DATOS DE LAS EMPRESA
+         */
+
+/*IN _idempresa SMALLINT ,
+IN _idactividad SMALLINT ,
+IN _idmcipio SMALLINT ,
+IN _identificacion VARCHAR (16),
+IN _razon_social VARCHAR (100),
+IN _email VARCHAR (100),
+IN _direccion VARCHAR (100),
+IN _contacto VARCHAR (30),
+IN _nro_telefono VARCHAR (30),
+IN _password VARCHAR (128)
+*/
+
+>>>>>>> origin/master
     }
 
 }
