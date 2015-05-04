@@ -21,6 +21,12 @@ class ServiciosController extends Controller
         $this->View->Mostrar_Vista('administrar-datos');
     }
 
+    public function  listado_modificar_eliminar()
+    {
+        $this->View->SetCss(array('fc_servicios_listado'));
+        $this->View->SetJs(array('fc_servicios_administrar-datos'));
+        $this->View->Mostrar_Vista('listado');
+    }
 
 
 }

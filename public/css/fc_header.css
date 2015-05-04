@@ -50,3 +50,9 @@
 {
 	   background: #D15621;
 }
+
+#btn_desplegable-empresa ,
+#btn_desplegable-servicios
+ {
+ 	  background: #FF6624;
+ }

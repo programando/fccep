@@ -1,0 +1,25 @@
+/* cont-principal */
+.cont-pagina
+{
+		 display: block;
+		 padding-top: 90px;
+		 background: white;
+}
+
+/* Contenedor = Table */
+.cont-table
+{
+	   width: 85%;
+	   margin: 0px auto;
+}
+
+
+
+/* Cabezera = Tabla */
+.titulo-tabla ,
+.cuerpo-tabla  /*Texto que contiene la tabla*/
+{
+	    text-align: center;
+}
+
+

@@ -25,8 +25,17 @@ class EmpresaController extends Controller
         $this->View->Mostrar_Vista('empresa_crear');
     }
 
+   public function listado_modificar_eliminar()
+    {
+
+        $this->View->SetCss(array('fc_empresa_listado'));
+        $this->View->SetJs(array('fc_empresa_listado'));
+        $this->View->Mostrar_Vista('listado');
+    }
+
 }
 
 
 
 ?>
+
