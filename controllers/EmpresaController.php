@@ -5,6 +5,8 @@ class EmpresaController extends Controller
     public function __construct()
     {
         parent::__construct();
+        $this->Municipios = $this->Load_Model('Municipios');
+        $this->Servicios  = $this->Load_Model('Servicios');
 
     }
 
@@ -20,6 +22,8 @@ class EmpresaController extends Controller
      * ABRIL 15 DE 2015
      *  PERMITE LA ADMINISTRACIÓN DE DATOS DE LAS EMPRESAS
      */
+        $this->View->Listado_Municipios = $this->Municipios->Listado_General();
+        $this->View->Servicios          = $this->Servicios->Listado_General();
         $this->View->SetCss(array('fc_empresa_registrar'));
         $this->View->SetJs(array('fc_empresa_registrar'));
         $this->View->Mostrar_Vista('empresa_crear');

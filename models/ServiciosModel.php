@@ -17,6 +17,16 @@
 
 
 
+				public function Listado_General($Datos = array())
+				{
+					extract($Datos);
+					$Servicios = $this->Db->Ejecutar_Sp("actividades_listado_general()");
+					return 	$Servicios;
+				}
+
+
+
+
 
 
   }
