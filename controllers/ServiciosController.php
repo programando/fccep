@@ -28,6 +28,7 @@ class ServiciosController extends Controller
         $this->View->SetCss(array('fc_servicios_listado'));
         $this->View->SetJs(array('fc_servicios_administrar-datos'));
         $this->View->Mostrar_Vista('listado');
+      }
 
     public function grabar()
     {

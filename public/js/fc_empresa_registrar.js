@@ -1,16 +1,8 @@
 // Validacion De Formulario  == GRABAR ==
-var $nit           = $('#identificacion');
-var $razon_social  = $('#razon_social');
-var $direccion     = $('#direccion');
-var $telefono      = $('#nro_telefono');
-var $ciudad        = $('#idmcipio');
-var $act_economica = $('#idactividad');
-var $contacto      = $('#contacto');
-var $email         = $('#email');
-var $password      = $('#password');
 
 // Efecto De Validacion
-$nit.on('focus',function(){
+$('#identificacion').on('focus',function(){
+  var $nit           = $('#identificacion');
    if ( $nit.val() == 'Registre el nombre' ) {
      $nit.css('background','white') ;
      $nit.css('color','black') ;
@@ -18,7 +10,8 @@ $nit.on('focus',function(){
    }
 });
 
-$razon_social.on('focus',function(){
+$('#razon_social').on('focus',function(){
+  var $razon_social  = $('#razon_social');
    if ( $razon_social.val() == 'Ingrese Razón Social' ) {
      $razon_social.css('background','white') ;
      $razon_social.css('color','black') ;
@@ -26,7 +19,8 @@ $razon_social.on('focus',function(){
    }
 });
 
-$direccion.on('focus',function(){
+$('#direccion').on('focus',function(){
+  var $direccion     = $('#direccion');
    if ( $direccion.val() == 'Ingrese Dirección' ) {
      $direccion.css('background','white') ;
      $direccion.css('color','black') ;
@@ -34,7 +28,8 @@ $direccion.on('focus',function(){
    }
 });
 
-$telefono.on('focus',function(){
+$('#nro_telefono').on('focus',function(){
+  var $telefono      = $('#nro_telefono');
    if ( $telefono.val() == 'Ingrese Teléfono' ) {
      $telefono.css('background','white') ;
      $telefono.css('color','black') ;
@@ -42,7 +37,8 @@ $telefono.on('focus',function(){
    }
 });
 
-$ciudad.on('focus',function(){
+$('#idmcipio').on('focus',function(){
+    var $ciudad        = $('#idmcipio');
    if ( $ciudad.val() == 'Ingrese Ciudad' ) {
      $ciudad.css('background','white') ;
      $ciudad.css('color','black') ;
@@ -50,7 +46,8 @@ $ciudad.on('focus',function(){
    }
 });
 
-$act_economica.on('focus',function(){
+$('#idactividad').on('focus',function(){
+  var $act_economica = $('#idactividad');
    if ( $act_economica.val() == 'Ingrese Actividad Económica' ) {
      $act_economica.css('background','white') ;
      $act_economica.css('color','black') ;
@@ -58,7 +55,8 @@ $act_economica.on('focus',function(){
    }
 });
 
-$contacto.on('focus',function(){
+$('#contacto').on('focus',function(){
+  var $contacto      = $('#contacto');
    if ( $contacto.val() == 'Ingrese Contacto' ) {
      $contacto.css('background','white') ;
      $contacto.css('color','black') ;
@@ -66,7 +64,8 @@ $contacto.on('focus',function(){
    }
 });
 
-$email.on('focus',function(){
+$('#email').on('focus',function(){
+  var $email         = $('#email');
    if ( $email.val() == 'Ingrese Email' ) {
      $email.css('background','white') ;
      $email.css('color','black') ;
@@ -74,7 +73,8 @@ $email.on('focus',function(){
    }
 })
 
-$password.on('focus',function(){
+$('#password').on('focus',function(){
+   var $password      = $('#password');
    if ( $password.val() == 'Ingrese Password' ) {
      $password.css('background','white') ;
      $password.css('color','black') ;
@@ -82,9 +82,53 @@ $password.on('focus',function(){
    }
 })
 
+var Mensaje = function(parametros)
+{
+   $('.modal-body #texto').html(parametros);
+   $('#ventana').modal('show');
+}
+
+function Grabar_Empresa(Parametros)
+{
+  $.ajax({
+          data:  Parametros,
+          dataType: 'text',
+          url:      '/fccep/empresa/grabar/',
+          type:     'post',
+           success:  function (resultado)
+           {
+            resultado =  resultado.replace("\n", "");
+            resultado = resultado.replace(/\s+/g, '');
+            if ( resultado == 'EmailNoOk')
+            {
+              Mensaje('El correo electrónico tiene un formato no válido. El registro no pudo ser grabado.')
+            }else{
+               Mensaje('Registro almacenado con éxito !.')
+              $('#identificacion').val('');
+              $('#razon_social').val('');
+              $('#direccion').val('');
+              $('#nro_telefono').val('');
+              $('#contacto').val('');
+              $('#email').val('');
+              $('#password').val('');
+            }
+           }
+        });
+}
+
+
 // Evento
 $('#btn_grabar').on('click',function(){
-
+  var $nit           = $('#identificacion');
+  var $razon_social  = $('#razon_social');
+  var $direccion     = $('#direccion');
+  var $telefono      = $('#nro_telefono');
+  var $ciudad        = $('#idmcipio');
+  var $act_economica = $('#idactividad');
+  var $contacto      = $('#contacto');
+  var $email         = $('#email');
+  var $password      = $('#password');
+  var $Parametros    ='';
    $campos_validados = true ;
 
    if ( $nit.val()=='' ) {
@@ -152,9 +196,19 @@ $('#btn_grabar').on('click',function(){
 
  if ($campos_validados == true )
  {
-
+    var $nit           = $nit.val();
+    var $razon_social  = $razon_social.val();
+    var $direccion     = $direccion.val();
+    var $telefono      = $telefono .val();
+    var $ciudad        = $ciudad.val();
+    var $act_economica = $act_economica.val();
+    var $contacto      = $contacto.val();
+    var $email         = $email.val();
+    var $password      = $password.val();
+    $Parametros = {'idactividad':$act_economica,'idmcipio':$ciudad ,'identificacion':$nit,'razon_social':$razon_social,
+                   'email':$email,'direccion':$direccion, 'contacto':$contacto, 'nro_telefono':$telefono, 'password':$password  };
+   Grabar_Empresa($Parametros);
  }
-
 
 
 
