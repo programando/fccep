@@ -13,13 +13,33 @@
 	   margin: 0px auto;
 }
 
-
-
 /* Cabezera = Tabla */
 .titulo-tabla ,
-.cuerpo-tabla  /*Texto que contiene la tabla*/
+.cuerpo-tabla
 {
 	    text-align: center;
 }
 
+/* IMG = Modificar */
+.link_modificar
+{
+ 	  color: #449D44;
+ 	  cursor: pointer;
+ 	  display: block;
+ 	  padding: 3px;
+ 	  width: 50%;
+ 	  margin: 0px auto;
+ 	  min-width: 30px;
+}
 
+/* IMG = Eliminar */
+.link_eliminar
+{
+	   color: #C9302C;
+ 	  cursor: pointer;
+ 	  display: block;
+ 	  padding: 3px;
+ 	  width: 50%;
+ 	  margin: 0px auto;
+ 	  min-width: 30px;
+}
